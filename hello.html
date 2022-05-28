@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Sample</title>
+    <!-- jsファイル読み込み -->
+    <script src="./hello.js"></script>
+  </head>
+  <body>
+    <script>
+      //文字を表示するJavaScriptのプログラム
+      // document.write("Hello World");
+
+      //hello.jsで定義した関数の処理を呼び出す
+      hello();
+
+      //四則演算
+      //足し算・引き算
+      document.write(10 + 30);
+      document.write("<br />"); //改行
+      document.write(40 - 20);
+
+      document.write("<br />");
+
+      //掛け算・割り算
+      document.write(30 * 10);
+      document.write("<br />");
+      document.write(30 / 75);
+
+      document.write("<br />");
+
+      //文字列
+      document.write("今日は" + "月曜日です");
+      document.write("<br />");
+      document.write("1 + 2  = " + (1 + 2));
+
+      document.write("<br />");
+
+      //変数
+      let x = 1;
+      let y = 2;
+      let total = x + y;
+      document.write(total);
+
+      document.write("<br />");
+
+      //配列
+      let student = ["佐藤", "鈴木", "山田", "近藤"];
+      document.write(
+        student[0] + "さんと" + student[1] + "さんが今日の日直です。"
+      );
+
+      document.write("<br />");
+
+      //連想配列
+      //連想配列では添え字の代わりに名前を付けることができます
+      let student2 = {
+        sato: 100,
+        suzuki: 80,
+        yamada: 20,
+        kondo: 70,
+      };
+      document.write("佐藤さんの得点は" + student2["sato"] + "点です。");
+    </script>
+  </body>
+</html>
+
+<!-- editor.linkedEditing -->

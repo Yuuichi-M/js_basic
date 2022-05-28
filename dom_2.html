@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- getElementsByClassName -->
+    <!-- classの属性が設定されたHTML要素を操作します。-->
+    <!-- classはひとつのHTMLファイル中に複数指定することができます。  -->
+    <h1>ランチメニュー</h1>
+    <h2>月曜日～水曜日</h2>
+    <p class="menu">唐揚げ定食</p>
+    <h2>木曜日～金曜日</h2>
+    <p class="menu">焼きそば定食</p>
+    <h2>土曜日～日曜日</h2>
+    <p class="menu">コロッケ定食</p>
+    <button onclick="changeMenu()">ボタン</button>
+    <script>
+      // document.getElementsByClassName("menu")でmenuという属性を設定した３個のpタグを取得します。
+      function changeMenu() {
+        let menus = document.getElementsByClassName("menu");
+        menus[0].style.color = "#ff0000";
+        menus[1].innerHTML = "ラーメン定食";
+        menus[2].remove();
+      }
+
+      //コンソールログ
+      let message = "Hello World";
+      console.log(message);
+    </script>
+  </body>
+</html>

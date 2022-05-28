@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- DOM操作 -->
+    <!-- HTMLやXML文書を取り扱うための仕組み -->
+
+    <script>
+      // getElementById
+      //HTMLのidの属性を指定してそのタグを取り出すことができます。
+      //この例では変数textboxに取り出したテキストボックスを代入しています
+      function changeText() {
+        let textbox = document.getElementById("textbox");
+        textbox.value = "ボタンを押しました";
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="textbox" value="ボタンを押してください" />
+    <button onclick="changeText();">ボタン</button>
+  </body>
+</html>

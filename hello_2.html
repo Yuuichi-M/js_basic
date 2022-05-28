@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Sample 2</title>
+  </head>
+  <body>
+    <script>
+      //関数
+      //ある機能を持ったプログラムをひとつにまとめることができます
+      function recept() {
+        let egg = 300;
+        let rice = 1000;
+        let soysauce = 200;
+        let total = egg + rice + soysauce;
+        document.write(total);
+      }
+      recept();
+
+      document.write("<br/>");
+
+      //引数と戻り値
+      //引数とは関数に値を渡すことでその値を利用して処理をすることができます
+      //戻り値とは関数を実行した結果を変数として受け取ることができます
+      let tax = 1.1;
+      //変数taxに1.1を代入しrecept関数に渡す。recept(引数)
+      function recept_2(tax) {
+        let egg = 300 * tax;
+        let rice = 1000 * tax;
+        let soysauce = 200 * tax;
+        let total = egg + rice + soysauce;
+        return total; //戻り値
+      }
+      let pay = recept_2(tax); //recept(tax)に戻り値が設定されている状態
+      document.write(pay);
+
+      document.write("<br/>");
+
+      /** 条件分岐
+       *「こういう場合はこういう動作にしてください」という、条件によって動作を変えること
+       */
+      let point = 80;
+      if (point > 70) {
+        document.write("合格");
+      } else {
+        document.write("不合格");
+      }
+
+      document.write("<br/>");
+
+      /**
+       *複数の条件を設定したif
+       */
+      let lastname = "山田";
+      let firstname = "一郎";
+      if (lastname == "山田" && firstname == "太郎") {
+        document.write("私は山田太郎です");
+      } else {
+        document.write("私は" + lastname + firstname + "です");
+      }
+
+      document.write("<br/>");
+
+      /**
+       * elseifを使うことで条件を増やすこともできます
+       */
+      let weather1 = "晴れ";
+      let weather2 = "雨";
+
+      if (weather1 == "晴れ" && weather2 == "晴れ") {
+        document.write("今日は一日中晴れます！");
+      } else if (weather1 == "晴れ" || weather2 == "曇りです") {
+        document.write("今日は晴れまたは曇りです");
+      } else {
+        document.write("今日は雨が降ります");
+      }
+
+      document.write("<br/>");
+
+      /**
+       * 繰り返し for foreach
+       * 同じ処理を何度も記述するのではなく、forやforeachという命令を使って繰り返し実行します
+       */
+      for (let i = 0; i < 10; i++) {
+        document.write("繰り返しの" + i + "回目です");
+        document.write("<br />");
+      }
+
+      /**
+       * foreachは配列に代入されている値を順番に取り出して、それぞれの値を使った処理をするときに使います
+       */
+      let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      array.forEach(function (element) {
+        document.write("配列の" + element + "番目を表示");
+        document.write("<br />");
+      });
+    </script>
+  </body>
+</html>
